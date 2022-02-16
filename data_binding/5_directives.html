@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<div id="app">
+
+    <a :href="url">{{url}}</a>
+
+    <h1 @click="number++">{{number}}</h1><br/>
+    <h1 @click="number--">Decrement</h1>
+
+
+    <form action="" @submit.prevent="number++">
+        <button type="submit">+</button>
+    </form>
+
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data:{
+            number:'0',
+            url: 'https://www.google.co.il',
+
+            
+        }
+    })
+
+
+
+</script>

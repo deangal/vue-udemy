@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<div id="app">
+
+   <h1>Dean Gal {{isActive ? 'is active' : 'not active'}}</h1> 
+    <button @click="{isActive = !isActive}">{{isActive ? 'Deactive' : 'active'}} </button>
+</div>
+
+
+<script>
+   let vm = new Vue({
+        el: '#app',
+        data:{
+            isActive: false,
+        },
+       
+        watch:{
+            isActive: function(e){
+                alert('Sending an email ' + e)
+            }
+        }
+
+    })
+
+
+
+</script>

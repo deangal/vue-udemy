@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<style>
+    .active{
+        color:'blue';
+        font-size:'30px';
+    }
+
+    .nactive{
+        color:'red';
+        font-size:'30px';
+    }
+</style>
+
+<div id="app">
+
+    <div class="{isActive ? active : nactive}" >{{ name }}</div>
+
+
+
+</div>
+
+
+<script>
+    new Vue({
+        el: '#app',
+        data:{
+            
+            isActive: true,
+            name:'Dean',
+
+        }
+    })
+
+
+
+</script>

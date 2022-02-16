@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+<div id="app">
+
+    <ul>
+        <li v-for="post in posts" :key="post.id">
+        <h1>{{post.title}}</h1>    
+        <div>{{post.body}}</div>
+        </li>
+    </ul>
+
+</div>
+
+
+<script>
+   let vm = new Vue({
+        el: '#app',
+        data:{
+          
+            posts: [
+            {id: 1 ,title: 'post1' ,body:'lorem ipsum'},
+            {id: 2 ,title: 'post2' ,body:'loremloremlorem ipsum'},
+            {id: 3 ,title: 'post3' ,body:'loremlorem loremlorem'},
+            {id: 4 ,title: 'post4' ,body:'loremloremloremlorem ipsum'}
+            ]
+        },
+
+        
+    })
+
+
+
+</script>
