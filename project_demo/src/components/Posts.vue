@@ -50,6 +50,14 @@ import axios from 'axios'
         }
     },
 
+    watch: {
+      id: function() {
+         axios.get(`https://jsonplaceholder.typicode.com/todos`).then(posts =>{
+            this.posts = posts.data.filter(item => item.userId == this.id)
+         })
+      },
+    },
+
    
   }
 </script>

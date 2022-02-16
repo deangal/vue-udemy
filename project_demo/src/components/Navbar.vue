@@ -36,6 +36,8 @@
 }   
 
 span{
-    padding: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+
 }
 </style>
